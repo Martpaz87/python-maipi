@@ -9,10 +9,21 @@ En cambio, si omites el pass, te dará un error
 """
 class FemaleSim:
     experiencia = 1
-    resistencia = 100 #le agrego atributos.
+    resistencia = 10 #le agrego atributos.
     aprendizaje = 1
+    hp = 10 #puntos de vida
+
+
+    def game_over(self):           #metodo:sería ejecutado de forma parecida a la de una función, ya que los métodos son en realidad funciones que pertenecen a una clase, nada más.
+        print("Game Over")
 
 #objeto
 fsim_1 = FemaleSim()
-# si esta clase tuviese metodos y atributos , el objeto los estaria adquiriendo.
 
+# si esta clase tuviese metodos y atributos , el objeto los estaria adquiriendo.
+print(fsim_1.resistencia)
+
+fsim_1.hp = 0  #se le asigna un nuevo valor al atributo hp que solo afecta al objeto fsim_1. se le bajan los puntos de vida
+
+if fsim_1.hp == 0:
+    fsim_1.game_over()
