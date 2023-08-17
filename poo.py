@@ -83,3 +83,7 @@ alumnoa001 = Alumnos_as("Martina", "Acevedo", "1º")
 print(alumnoa001.nombre)
 print(alumnoa001.materias)
 # La segunda forma de hacer esto, es instanciar el objeto sin especificar nada en materias y utilizamos por ejemplo un append para ir añadiendo materias a la lista en el momento que queramostambein puede ser pop(), insert()
+"""alumnoa001.materias.apend("Matematica")  
+alumnoa002.materias.apend("sociologia")
+ """
+ 
