@@ -56,9 +56,8 @@ they_sim.carisma = 8
 
 # self : self de Python hace referencia al nombre del objeto en el que se encuentra escrito
 class Sim:
-     def __init__(self, experiencia, resistencia, capacidad_aprendizaje, hp, carisma, habilidad_cocina):
+     def __init__(self, experiencia, capacidad_aprendizaje, hp, carisma):
         self.experiencia = experiencia
-        self.resistencia = resistencia
         self.capacidad_aprendizaje = capacidad_aprendizaje
         self.hp = hp
         self.carisma = carisma
@@ -66,5 +65,21 @@ class Sim:
 #con el método __init__ es que vamos a evitar escribir cada vez las lineas de asignación de nuevos valores.
 #Si los escribes para un objeto, tampoco es tanto, ¿Y si son quinientos objetos con cincuenta atributos? Gracias al __init__evitarás este problema
 
+sim_1 = Sim(1, 5, 10, 8)
+#con esta sintaxis se hace así. En ella, me va a pedir obligatoriamente los cuatro parámetros especificados en el __init__. Si le pones tres te dará error, si le pones cinco también. Así que ya sabes, ni uno más ni uno menos.
+print(sim_1.experiencia)
 
+#atributos obligatorios y opcionales de las clases.
 
+class Alumnos_as:
+    def __init__(self, nombre, apellido, curso) -> None:
+        self.nombre = nombre
+        self.apellido = apellido
+        self.curso = curso
+        self.materias = [] #no es un atributo obligatorio. sino deberia ponerlo arriba con los argumentos obligatorios del init
+
+alumnoa001 = Alumnos_as("Martina", "Acevedo", "1º")
+
+print(alumnoa001.nombre)
+print(alumnoa001.materias)
+# La segunda forma de hacer esto, es instanciar el objeto sin especificar nada en materias y utilizamos por ejemplo un append para ir añadiendo materias a la lista en el momento que queramostambein puede ser pop(), insert()
