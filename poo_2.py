@@ -41,3 +41,11 @@ usuario1 = Usuarios("001", "Ravenclaws20", "Ramona", "Fernández Prieto")
 usuario1.muestra_datos()
 
 print(usuario1.tipo_usuario)
+
+#lo que conviene en estos casos es aprovechar la herencia para no tener que estar repitiendo atributos y métodos que son comunes para ambas clases.
+#Para hacer que UsuariosPremium herede de Usuarios lo debes hacer añadiéndole unos paréntesis con el nombre de la clase de la que quieres heredar.
+#Solo tienes que dejar los atributos o métodos que sean diferentes o tengan valores diferentes a los de la super clase.
+class UsuariosPremium(Usuarios):
+	tipo_usuario = "premium"
+	publicidad = False
+	
