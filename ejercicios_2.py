@@ -10,7 +10,4 @@ def Vocales(x):
     else:
         print("no es una vocal")
 Vocales("a")
-Vocales("f")
-        
-
-   
+Vocales("f") 
